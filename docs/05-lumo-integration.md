@@ -81,13 +81,24 @@ documentation effort like this one. One-off drafting tasks don't need the
 overhead. Project-linked files come from Proton Drive, so the encryption
 boundary extends to the attached material.
 
-### Memory Setting
+## Memory Setting
 
-Memory is disabled by default and that's the correct posture for this
-workflow: conventions belong in lumo-brief.md (portable, reviewable,
-version-controllable in spirit) rather than in opaque model-side state.
-Enable it only if session-to-session recall of preferences proves more
-valuable than the transparency of the file-based approach.
+Memory is enabled for this workflow. Sessions routinely involve drafting and
+refining documents where a consistent personal voice matters, and learned
+preferences (tone, structure habits, feedback patterns) measurably improve
+first-pass output. The trade-off is accepted knowingly: memory is opaque
+model-side state, reviewable only through Proton's memory-management UI
+rather than a file. Mitigations:
+
+- Conventions that matter structurally (formats, naming, citation rules)
+  still live in `lumo-brief.md` — a reviewable, portable artifact
+- Memory holds style and preferences only; no secrets ever enter a session,
+  so memory cannot leak one
+- Memory can be disabled or wiped in Settings → Memory if the posture needs
+  to change
+
+The split is deliberate: structural rules in a human-readable file, stylistic
+context in model memory. Each tool does what it's good at.
 
 ## Privacy Boundary Summary
 
