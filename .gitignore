@@ -1,4 +1,3 @@
-*.tar
 *.tar.*
 *.jar
 *.exe
@@ -9,6 +8,20 @@
 *.log
 *.log.*
 *.sig
-
 pkg/
 src/
+
+# Editor / OS cruft
+*~
+.*.swp
+.~lock.*
+.directory
+
+# Secrets and vault files — never track
+*.kdbx
+*.key
+.env
+.env.*
+rclone.conf
+*token*
+credentials*
