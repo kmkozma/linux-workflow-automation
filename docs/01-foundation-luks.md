@@ -39,7 +39,7 @@ it was built for.
 
 ## The First Migration (What Went Wrong)
 
-In June 2025, the evaluation phase produced a working Linux desktop. The
+In June 2026, the evaluation phase produced a working Linux desktop. The
 priority was getting a usable replacement for Windows — stable apps,
 functional hardware, acceptable performance. LUKS was recognized as the
 right long-term choice, but deferred to "later."
