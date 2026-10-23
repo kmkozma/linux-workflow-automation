@@ -6,7 +6,7 @@ synchronization, secrets management, and a local-first document workflow.
 
 ## Why This Exists
 
-This project began in June 2025 as an evaluation of hardened Linux options for
+This project began in June 2026 as an evaluation of hardened Linux options for
 a production Windows workstation. The guiding principles: local-first document
 editing, encrypted sync to cloud storage, and no secrets ever living in
 plaintext files. Every decision and failure mode is documented in `docs/`
