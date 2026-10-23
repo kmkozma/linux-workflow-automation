@@ -6,11 +6,16 @@ synchronization, secrets management, and a local-first document workflow.
 
 ## Why This Exists
 
-This project replaced a Windows workstation with a hardened Linux setup
-built around three principles: local-first document editing, encrypted
-sync to cloud storage, and no secrets ever living in plaintext files.
-Every decision and failure mode is documented in `docs/` so the design
-can be audited.
+This project began in June 2025 as an evaluation of hardened Linux options for
+a production Windows workstation. The guiding principles: local-first document
+editing, encrypted sync to cloud storage, and no secrets ever living in
+plaintext files. Every decision and failure mode is documented in `docs/`
+so the design can be audited.
+
+The first migration shipped without full-disk encryption and was subsequently
+wiped and redone correctly once the LUKS requirement was recognized — a
+failure documented in `docs/01-foundation-luks.md`. This is technically the
+second migration, and that lesson shapes the entire architecture.
 
 ## Architecture at a Glance
 
@@ -18,7 +23,8 @@ can be audited.
 - **Documents:** OnlyOffice (OOXML-native) with LibreOffice fallback,
   edited locally, pushed on demand
 - **Sync:** rclone one-way push to Proton Drive with dated `--backup-dir`
-  safety net
+  safety net (community-implemented backend; occasionally requires
+  manual re-authentication)
 - **Secrets:** GNOME Keyring (Secret Service API); scripts retrieve
   credentials at runtime with `secret-tool`
 - **Collaboration:** .docx/.xlsx with Office users; Proton-native

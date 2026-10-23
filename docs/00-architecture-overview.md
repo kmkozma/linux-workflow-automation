@@ -2,8 +2,14 @@
 
 ## Purpose
 
-This project replaces a production Windows workstation with a hardened Linux
-environment designed around three principles:
+This project began in June 2025 as an evaluation of hardened Linux options
+for a production Windows workstation and has been in continuous development
+since. The design decisions documented here were chosen because they satisfy
+one of the three rules without violating another. The "obvious" alternatives
+— live-editing on a FUSE mount, bidirectional sync, secrets in dotfiles —
+were rejected for specific reasons that are spelled out in their respective
+chapters.
+
 
 1. **Local-first document editing** — edit files on the NVMe; sync to cloud on demand
 2. **Encrypted cloud synchronization** — rclone push to Proton Drive with dated
@@ -69,6 +75,13 @@ directory required.
 
 Work in progress — chapters are published as they're finalized. See the commit
 history for the current state.
+
+## History
+
+Evaluation and initial migration began June 2025. The first install shipped
+without full-disk encryption and was wiped and redone with LUKS in October
+2025. The repository was made public in October 2026, documenting the second
+migration and ongoing work.
 
 ---
 
@@ -159,7 +172,7 @@ directory required.
 | Chapter | Description | Status |
 |---------|-------------|--------|
 | `00-architecture-overview.md` | This document | Complete |
-| `01-foundation-luks.md` | LUKS installation and verification | Pending |
+| `01-foundation-luks.md` | LUKS installation, verification, and lessons from the first unencrypted install | Complete |
 | `02-secrets-management.md` | GNOME Keyring, Secret Service, SSH agent integration | Pending |
 | `03-cloud-sync-rclone.md` | rclone configuration, push/pull scripts, --backup-dir safety | Pending |
 | `04-document-workflow.md` | OnlyOffice, LibreOffice fallback, autosave discipline | Pending |
@@ -170,6 +183,13 @@ directory required.
 
 Work in progress — chapters are published as they're finalized. See the commit
 history for the current state.
+
+## History
+
+Evaluation and initial migration began June 2025. The first install shipped
+without full-disk encryption and was wiped and redone with LUKS in October
+2025. The repository was made public in October 2026, documenting the second
+migration and ongoing work.
 
 ---
 
