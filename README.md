@@ -36,8 +36,10 @@ See `docs/00-architecture-overview.md` for the full design rationale.
 
 | Path | Description |
 |------|-------------|
-| `docs/` | Full technical runbook, chaptered by component |
+| `~/Work/` | Canonical local work tree — the only directory synced |
+| `docs/` | Runbook chapters, one per component |
 | `scripts/` | Sync, pull, and mount scripts referenced by the runbook |
+
 
 ## Status
 
