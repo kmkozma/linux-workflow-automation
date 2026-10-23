@@ -2,7 +2,7 @@
 
 ## Purpose
 
-This project began in June 2025 as an evaluation of hardened Linux options
+This project began in June 2026 as an evaluation of hardened Linux options
 for a production Windows workstation and has been in continuous development
 since. The design decisions documented here were chosen because they satisfy
 one of the three rules without violating another. The "obvious" alternatives
@@ -78,7 +78,7 @@ history for the current state.
 
 ## History
 
-Evaluation and initial migration began June 2025. The first install shipped
+Evaluation and initial migration began June 2026. The first install shipped
 without full-disk encryption and was wiped and redone with LUKS in October
 2025. The repository was made public in October 2026, documenting the second
 migration and ongoing work.
@@ -186,9 +186,9 @@ history for the current state.
 
 ## History
 
-Evaluation and initial migration began June 2025. The first install shipped
+Evaluation and initial migration began June 2026. The first install shipped
 without full-disk encryption and was wiped and redone with LUKS in October
-2025. The repository was made public in October 2026, documenting the second
+2026. The repository was made public in October 2026, documenting the second
 migration and ongoing work.
 
 ---
