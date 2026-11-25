@@ -2,8 +2,8 @@
 # Pull from Proton Drive to ~/Work. Run BEFORE editing when switching devices.
 set -euo pipefail
 
-REMOTE="protondrive:00 - Work"
 LOCAL="$HOME/Work"
+REMOTE="protondrive:00 - Work"
 LOG="$HOME/.local/state/rclone-pull.log"
 
 # --- Preconditions -----------------------------------------------------------
@@ -27,8 +27,9 @@ export RCLONE_CONFIG_PASS="$PASS"
 
 echo "[$(date)] Pulling $REMOTE -> $LOCAL"
 
-if rclone sync "$REMOTE" "$LOCAL" \
-     --exclude 'Archive/**' \
+if rclone sync "$LOCAL" "$REMOTE" \
+     --backup-dir "$BACKUP" \
+     --filter-from "$HOME/.config/rclone/filter.txt" \
      --transfers 4 \
      --checkers 8 \
      --log-file "$LOG" --log-level INFO
