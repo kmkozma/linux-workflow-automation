@@ -1,9 +1,9 @@
-#!usr/bin/env bash
+#!/usr/bin/env bash
 # One-way push of ~/Work to Proton Drive with dated safety net.
 set -euo pipefail
 
-REMOTE="protondrive:00 - Work"
 LOCAL="$HOME/Work"
+REMOTE="protondrive:00 - Work"
 BACKUP="protondrive:_backups/$(date +%Y-%m-%d_%H%M%S)"
 LOG="$HOME/.local/state/rclone-push.log"
 
@@ -30,7 +30,7 @@ echo "[$(date)] Pushing $LOCAL -> $REMOTE"
 
 if rclone sync "$LOCAL" "$REMOTE" \
      --backup-dir "$BACKUP" \
-     --exclude 'Archive/**' \
+     --filter-from "$HOME/.config/rclone/filter.txt" \
      --transfers 4 \
      --checkers 8 \
      --log-file "$LOG" --log-level INFO

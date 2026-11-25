@@ -38,7 +38,7 @@ specific reasons that are spelled out in their respective chapters.
   - `Projects/` — canonical .docx/.xlsx, live-edited in OnlyOffice
   - `Drafts/` — Lumo-generated markdown/text
   - `lumo-brief.md` — standing conventions for Lumo sessions
-- `protondrive:/Work/` — mirror of `~/Work/` (pushed via rclone --backup-dir)
+- `protondrive:/00 - Work/` — mirror of `~/Work/` (pushed via rclone --backup-dir)
 
 **Note:** `~/Vault/` was removed. The project now relies on GNOME Keyring for
 automation secrets and ProtonPass for personal passwords — no separate vault
